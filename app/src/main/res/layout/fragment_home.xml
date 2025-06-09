@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- 广告轮播 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#FFFFFF">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/banner_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- 指示器 -->
+        <RadioGroup
+            android:id="@+id/banner_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <!-- 市场图标网格 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/market_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:padding="5dp" />
+
+    <!-- 推荐商品标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="推荐商品"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- 推荐商品网格 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recommended_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:padding="5dp" />
+
+    <!-- 电器商品标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="电器商品"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- 瀑布流布局的商品列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/staggered_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="5dp" />
+</LinearLayout>
